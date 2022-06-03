@@ -10,7 +10,7 @@
 */
 int main(void)
 {
-	printf("with proper grammar, but");
+	printf("with proper grammar, but ");
 	printf("the outcome is a piece of art,\n");
 	return (0);
 }
