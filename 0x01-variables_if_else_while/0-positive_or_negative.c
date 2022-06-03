@@ -2,21 +2,24 @@
 #include <time.h>
 
 /**
-* main - Entry point for the C code
-*                                                 * Description: This program picks random
-*numbers and says if it's positive or negative
+* main - Entry point for the Code
 *
-* Return: it returns an int 0 fo (success)
+* Description: This code dtermines if a random
+*number displayed, is positive or negative.
+*
+* Return: this reurns an int 0 for (success)
 */
 int main(void)
 {
-        int n;
-        srand(time(0));
-        n = rand() - RAND_MAX / 2;
-        if (n > 0)
-        printf("%d: is poitive\n", n);
-        else if (n == 0)
-        printf("%d: is zero\n", n);                       else
-        printf("%d: is negative\n", n);
-                return (0);
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else
+		printf("%d is negative\n", n);
+	return (0);
 }
