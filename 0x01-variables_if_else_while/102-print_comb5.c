@@ -22,7 +22,7 @@ int main(void)
 			c = a;
 			while (c < 58)
 			{
-				while (da < 58)
+				while (d < 58)
 				{
 					putchar(a);
 					putchar(b);
@@ -45,3 +45,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
+}
