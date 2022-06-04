@@ -10,13 +10,13 @@
 
 int main(void)
 {
-	int x;
-	int y;
+	int x = 48;
+	int y = 48;
 
-	for (x = 48; x < 58; x++)
+	while (x < 58)
 	{
 		y = x + 1;
-		for (y = 48; y < 58; y++)
+		while (y < 58)
 		{
 			putchar(x);
 			putchar(y);
@@ -26,7 +26,9 @@ int main(void)
 				putchar(44);
 				putchar(32);
 			}
+			y++;
 		}
+		x++;
 	}
 	putchar('\n');
 	return (0);
