@@ -13,7 +13,8 @@ void times_table(void)
 	int rows;
 	int columns;
 	int times;
-	int T_unitss, Units;
+	int T_units;
+	int Units;
 
 	for (rows = 0; rows <= 9; rows++)
 	{
