@@ -13,7 +13,7 @@ int main(void)
 {
 	long int fib;
 	long int a;
-	long long int b;
+	long int b;
 	int num;
 
 	fib = 0;
@@ -25,7 +25,7 @@ int main(void)
 	{
 		fib  = a + b;
 		printf("%li, ", fib);
-		a = b
+		a = b;
 		b = fib;
 
 		num++;
