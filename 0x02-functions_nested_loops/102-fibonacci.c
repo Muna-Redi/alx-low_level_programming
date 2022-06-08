@@ -4,7 +4,7 @@
  * main - will print the first 50 Fibonacci
  *numbers, starting with 1 and 2.
 *
-* Description: displays onlybthe fibonacci numbers from 1 to 50
+* Description: displays only the fibonacci numbers from 1 to 50
 *
 * Return: Always 0.
 */
