@@ -2,27 +2,26 @@
 
 /**
  * print_diagonal - draws diagonal line on the terminal
- * @n: number of times
+ * @n: number of times diagona prints.
  *
  * Return: void
  */
-
 void print_diagonal(int n)
 {
-	int line = 0;
+	int new = 0;
 	int spaces;
 
 	if (n > 0)
 	{
-		while (line < n)
+		while (new < n)
 		{
-			for (spaces = 0; spaces < line; spaces++)
+			for (spaces = 0; spaces < new; spaces++)
 			{
 				_putchar(' ');
 			}
 			_putchar('\');
 			_putchar('\n');
-			line++;
+			new++;
 		}
 	}
 	else
