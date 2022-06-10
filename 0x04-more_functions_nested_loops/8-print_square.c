@@ -2,22 +2,22 @@
 
 /**
 * print_square - prints square of n size
-* @n: size of square
+* @size: size of square
 *
 * Return: void.
 */
-void print_square(int n)
+void print_square(int size)
 {
 	int a;
 	int b;
 
-	if (n <= 0)
+	if (size <= 0)
 		_putchar('\n');
 	b = 0;
-	while (b < n)
+	while (b < size)
 	{
 		a = 0;
-		while (a < n)
+		while (a < size)
 		{
 			_putchar('#');
 			_putchar('\n');
