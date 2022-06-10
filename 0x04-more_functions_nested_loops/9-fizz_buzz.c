@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
 * main -  prints numbers 1 t0 100 and fizzbuzz for multiples
