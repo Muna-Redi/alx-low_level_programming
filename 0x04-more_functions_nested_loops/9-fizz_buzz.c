@@ -1,38 +1,31 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
-* main -  prints numbers 1 t0 100 and fizzbuzz for multiples
-* of 3 and 5
+* main - prints 1 to 100 and fizz-buzz if multiple of 3 and 5
 *
-* Description: prints 1 t0 100 with fizz and buzz for multiples of 3 and 5
-*
-* Return: 0 is success
+* Return: Always 0
 */
+
 int main(void)
 {
-	int n = 0;
+	int n;
 
-	while (n <= 100)
+	for (n = 1; n < 101; n++)
 	{
 		if (n % 5 == 0 && n % 3 == 0)
 			printf("FizzBuzz ");
 		else if (n % 5 == 0)
-		{
 			if (n == 100)
 				printf("Buzz");
 			else
 				printf("Buzz ");
-		}
 		else if (n % 3 == 0)
 			printf("Fizz ");
 		else
-		{
 			printf("%d ", n);
-		}
-		n++;
 	}
 	printf("\n");
+
 	return (0);
 }
-
