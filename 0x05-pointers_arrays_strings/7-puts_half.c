@@ -33,7 +33,7 @@ void puts_half(char *str)
 	else if (p % 2 != 0)
 	{
 		x = ((p - 1) / 2);
-		while (x < (p - 1))
+		while (x <= (p - 1))
 		{
 			_putchar(str[x]);
 			x++;
