@@ -19,7 +19,7 @@ void _puts(char *str)
 	}
 	p = n;
 	i = 0;
-	while (i < p)
+	while (i <= p)
 	{
 		_putchar(str[i]);
 		i++;
