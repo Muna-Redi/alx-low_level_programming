@@ -8,7 +8,10 @@
  */
 void rev_string(char *s)
 {
-	int n, i, p, r;
+	int n;
+	int p;
+	int r;
+	char i;
 
 	n = 0;
 	while (s[n] != '\0')
@@ -20,6 +23,8 @@ void rev_string(char *s)
 	while (p >= 0)
 	{
 		i = s[p];
+		s[p] = s[r - p];
+		s[r - p] = i;
 		p--;
 	}
 }
