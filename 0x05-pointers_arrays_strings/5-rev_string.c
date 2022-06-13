@@ -32,7 +32,7 @@ void rev_string(char *s)
 		}
 		else if (p == x)
 		{
-			s[p] = s[r - p];
+			s[p] = s[p];
 		}
 		p--;
 	}
