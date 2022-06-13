@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * rev_string - this reverses a string
- * @s: pointer to a string
+ * puts_half - this prints half of a string
+ * @str: pointer to a string
  *
  * Return: is void.
  */
-void rev_string(char *s)
+void puts_half(char *str)
 {
 	int n;
 	int p;
@@ -14,7 +14,7 @@ void rev_string(char *s)
 	int r;
 
 	n = 0;
-	while (s[n] != '\0')
+	while (str[n] != '\0')
 	{
 		n++;
 	}
@@ -26,7 +26,7 @@ void rev_string(char *s)
 	{
 		while (x < p)
 		{
-			_putchar(s[x]);
+			_putchar(str[x]);
 			x++;
 		}
 	}
@@ -35,8 +35,9 @@ void rev_string(char *s)
 		x = ((p - 1) / 2);
 		while (x < (p - 1))
 		{
-			_putchar(s[x]);
+			_putchar(str[x]);
 			x++;
 		}
 	}
+	_putchar('\n');
 }
