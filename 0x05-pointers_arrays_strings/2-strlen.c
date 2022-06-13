@@ -17,5 +17,5 @@ int _strlen(char *s)
 		n++;
 	}
 	lenght = n;
-	return (len);
+	return (lenght);
 }
