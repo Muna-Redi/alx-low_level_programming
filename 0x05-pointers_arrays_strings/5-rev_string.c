@@ -10,6 +10,7 @@ void rev_string(char *s)
 {
 	int n;
 	int p;
+	int x;
 	int r;
 	char i;
 
@@ -20,12 +21,19 @@ void rev_string(char *s)
 	}
 	r = n - 1;
 	p = r;
-	while (p >= 0)
+	x = p / 2;
+	while (p >= x)
 	{
-		i = s[p];
-		s[p] = s[r - p];
-		s[r - p] = i;
+		if (p > x)
+		{
+			i = s[p];
+			s[p] = s[r - p];
+			s[r - p] = i;
+		}
+		else if (p == x)
+		{
+			s[p] = s[r - p];
+		}
 		p--;
 	}
 }
-
