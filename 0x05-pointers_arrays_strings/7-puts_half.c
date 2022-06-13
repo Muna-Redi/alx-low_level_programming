@@ -32,8 +32,8 @@ void puts_half(char *str)
 	}
 	else if (p % 2 != 0)
 	{
-		x = ((p - 1) / 2);
-		while ((x + 1) < (p - 1))
+		x = ((p + 1) / 2);
+		while (x < p)
 		{
 			_putchar(str[x]);
 			x++;
