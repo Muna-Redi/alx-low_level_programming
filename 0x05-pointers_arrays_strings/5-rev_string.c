@@ -15,16 +15,11 @@ void rev_string(char *s)
 	{
 		n++;
 	}
-	i = n / 2;
 	r = n - 1;
 	p = r;
 	while (p >= 0)
 	{
-		s[r - p] = s[p];
-		if (p == i)
-		{
-			s[p] = s[r - p];
-		}
+		i = s[p];
 		p--;
 	}
 }
