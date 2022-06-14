@@ -26,6 +26,6 @@ void print_array(int *a, int n)
 			i++;
 			b++;
 		}
+		printf("%d\n", a[i]);
 	}
-	printf("%d\n", a[i]);
 }
