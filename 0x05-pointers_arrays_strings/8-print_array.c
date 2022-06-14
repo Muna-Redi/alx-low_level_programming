@@ -12,16 +12,25 @@
 void print_array(int *a, int n)
 {
 	int i;
-	int *b;
+	int b;
 
-	b = &n;
+	b = 1;
 	i = 0;
-	while (i <= *b)
+	if (n > 0)
 	{
-		printf("%d, ", a[i]);
-		if (i == *b)
-			printf("%d\n", a[i]);
-		i++;
+		while (b <= n)
+		{
+			printf("%d, ", a[i]);
+			if (b == n)
+			{
+				printf("%d\n", a[i]);
+			}
+			i++;
+			b++;
+		}
 	}
+	else
+		n = 0;
+
 
 }
