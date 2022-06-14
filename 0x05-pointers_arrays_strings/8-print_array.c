@@ -18,8 +18,6 @@ void print_array(int *a, int n)
 	i = 0;
 	if (n < 0)
 		n = 0;
-	else if (n == 0)
-		printf("%d\n", a[i]);
 	else if (n > 0)
 	{
 		while (a[i] != '\0' && b < n)
@@ -28,6 +26,6 @@ void print_array(int *a, int n)
 			i++;
 			b++;
 		}
-		printf("%d\n", a[i]);
 	}
+	printf("%d\n", a[i];
 }
