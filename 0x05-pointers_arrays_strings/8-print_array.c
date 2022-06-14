@@ -16,10 +16,8 @@ void print_array(int *a, int n)
 
 	b = 1;
 	i = 0;
-	if (n < 0)
-		n = 0;
-	else if (n == 0)
-		printf("%c\n", 0);
+	if (n <= 0)
+		printf("\n");
 	else if (n > 0)
 	{
 		while (a[i] != '\0' && b < n)
