@@ -35,6 +35,6 @@ char *cap_string(char *c)
 				c[i + 1] -= 32;
 		}
 	}
-	c[i] = '\0';
 	return (c);
+	_putchar('\n');
 }
