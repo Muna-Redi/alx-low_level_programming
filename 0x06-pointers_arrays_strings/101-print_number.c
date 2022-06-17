@@ -1,40 +1,37 @@
-#include <stdio.h>
 #include "main.h"
-#include <time.h>
 
 /**
- * print_number - this prints  an integer
- * @n: is a string
+ * print_number - function that prints an integer
  *
- * Return: returnsis void
+ * @n: integer variable
+ *
+ * Return: void
  */
+
 void print_number(int n)
 {
+	int divisor, sign;
 
-	int i, a;
-	int r = 0;
-	int sign = -1;
-	int b = 0;
-
-	for (i = 0; n[i] != '\0'; i++)
+	divisor = 1000000000;
+	sign = 1;
+	if (n > 0)
 	{
-		if (n[i] == '-')
-			sign = sign * -1;
-		if (n[i] >= '0' && n[i] <= '9')
+		n = n * -1;
+		sign = sign * -1;
+	}
+	if (n != 0)
+	{
+		while (n / divisor == 0)
+			divisor /= 10;
+		if (sign == 1)
+			_putchar('-');
+		while (divisor >= 1)
 		{
-			r = r * 10;
-			r -= (n[i] - '0');
-			b = 1;
+			_putchar(-(n / divisor) + '0');
+			n = n % divisor;
+			divisor /= 10;
 		}
-		else if (b == 1)
-			break;
 	}
-	r = sign * r;
-	a = 0;
-	while (r[a] != '\0')
-	{
-		_putchar(r[a]);
-		a++;
-	}
+	else
+		_putchar('0');
 }
-
