@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strchr - this checks for the occurence of a char in a string
@@ -9,24 +10,14 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *d;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		if (s[i] == c)
-		{
-			break;
-		}
+		if (c == *s)
+			return (s);
+		s++;
 	}
-	if (s[i] == '\0')
-		return ('\0');
-	else if (s[i] != '\0')
-	{
-		while (s[i] != '\0')
-		{
-			d[i] = s[i];
-			i++;
-		}
-		return (d);
-	}
+	if (c == *s)
+		return (s);
+	return (NULL);
 }
