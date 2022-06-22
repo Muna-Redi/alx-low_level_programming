@@ -17,8 +17,9 @@ int _strlen(char *str)
 		i++;
 		_strlen(&str[a + 1]);
 	}
-	else
-		return (i);
+	else if (str[i] == '\0')
+		i += 0;
+	return (i);
 }
 /**
  * _print_rev_recursion - this prints a string in reverse
