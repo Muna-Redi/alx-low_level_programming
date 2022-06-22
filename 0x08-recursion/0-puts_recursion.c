@@ -11,7 +11,7 @@ void _puts_recursion(char *s)
 	int i = 0, j = 0;
 
 	if (s[i] == '\0' && s[i] == s[j])
-		return;
+		break;
 	_putchar(s[j]);
 	i++;
 	_puts_recursion(&s[j + 1]);
