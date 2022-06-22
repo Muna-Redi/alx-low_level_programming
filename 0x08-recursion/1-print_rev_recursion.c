@@ -28,7 +28,7 @@ int _strlen(char *str)
  */
 void _print_rev_recursion(char *s)
 {
-	int x = 0, y = 0;
+	int x = 0;
 	int len = 0;
 
 	len = _strlen(s);
