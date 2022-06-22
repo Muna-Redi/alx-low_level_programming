@@ -10,7 +10,7 @@ void _puts_recursion(char *s)
 {
 	int i = 0, j = 0;
 
-	if (s[i] == '\0' && s[i] == s[j + 1])
+	if (s[i] == '\0' && s[i] == s[j])
 	{
 		_putchar('\n');
 		return;
