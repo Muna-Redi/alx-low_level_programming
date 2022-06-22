@@ -13,14 +13,12 @@ void _print_rev_recursion(char *s)
 
 	int _strlen_recursion(char *s);
 	len = _strlen_recursion(s);
-	if (len >= x)
+	if (x < len)
 	{
-		_putchar(*(s + len));
+		_putchar(s[len]);
 		len--;
-		_print_rev_recursion(&(s[len - 1]));
+		_print_rev_recursion(&s[len]);
 	}
-	else
-		return;
 }
 /**
  * _strlen_recursion - gets sring lengh
