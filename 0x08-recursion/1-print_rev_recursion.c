@@ -16,6 +16,8 @@ void _print_rev_recursion(char *s)
 	if (len >= x)
 	{
 		_putchar(*(s + len));
+		len--;
+		_print_rev_recursion(--s);
 	}
 	else
 		return;
