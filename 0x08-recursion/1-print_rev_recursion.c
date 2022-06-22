@@ -9,32 +9,11 @@
  */
 void _print_rev_recursion(char *s)
 {
-	int x = 0, len = 0;
-
-	int _strlen_recursion(char *s);
-	len = _strlen_recursion(s);
-	if (x < len)
-	{
-		_putchar(s[len]);
-		len--;
-		_print_rev_recursion(&s[_strlen_recursion(s) -1]);
-	}
-}
-/**
- * _strlen_recursion - gets sring lengh
- * @s: pointer to string
- *
- * Return: int
- */
-int _strlen_recursion(char *s)
-{
-	int i = 0;
-
 	if (*s != '\0')
 	{
-		i = 1 + _strlen_recursion(s + 1);
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
 	}
-	else if (*(s + 1) == '\0')
-		i += 0;
-	return (i);
+	else
+		return;
 }
