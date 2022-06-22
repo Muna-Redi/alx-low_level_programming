@@ -10,12 +10,12 @@ void _puts_recursion(char *s)
 {
 	int i = 0, j = 0;
 
-	if (s[i] == '\0' && s[i] == s[j])
+	if (s[i] == '\0' && s[i] == s[j + 1])
 		return;
 	_putchar(s[j]);
 	i++;
-	if (s[j] == '\0')
-		return;
+	if (s[j] == '\0' || s[j] == "")
+		_putchar('\0');
 	_puts_recursion(&s[j + 1]);
 	_putchar('\n');
 }
