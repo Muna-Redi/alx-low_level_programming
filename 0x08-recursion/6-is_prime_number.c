@@ -2,8 +2,8 @@
 
 /**
  * _div - checks for prime
- * @n: integer
- * @m: integer 
+ * @a: integer
+ * @b: integer
  * Return: conditional int
  */
 
@@ -25,7 +25,7 @@ int _div(int a, int b)
 
 /**
  * is_prime_number - gives prime numbers
- * @n: integer 
+ * @n: integer
  * Return: int
  */
 
