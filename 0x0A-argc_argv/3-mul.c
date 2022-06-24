@@ -19,9 +19,10 @@ int main(int argc, char *argv[])
 	mul = i * j;
 	if (argc < 3)
 	{
-		printf("Error");
+		printf("Error\n");
+		return (1);
 	}
 	else
 		printf("%d\n", mul);
-	return (1);
+	return (0);
 }
