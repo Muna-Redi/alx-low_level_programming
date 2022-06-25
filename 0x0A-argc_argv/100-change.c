@@ -28,16 +28,16 @@ int main(int argc, char *argv[])
 	}
 	ch25 = cents / 25;
 	rem = cents % 25;
-	ch10 = remainder / 10;
-	rem = remainder % 10;
-	ch5 = remainder / 5;
-	remainder = remainder % 5;
-	ch2 = remainder / 2;
-	remainder = remainder % 2;
-	ch1 = remainder / 1;
+	ch10 = rem / 10;
+	rem %= 10;
+	ch5 = rem / 5;
+	rem %= 5;
+	ch2 = rem / 2;
+	rem %= 2;
+	ch1 = rem / 1;
 
-	coins = ch25 + ch10 + ch10 + ch2 + ch1;
+	change = ch25 + ch10 + ch10 + ch2 + ch1;
 
-	printf("%d\n", coins);
+	printf("%d\n", change);
 	return (0);
 }
