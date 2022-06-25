@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	rem %= 2;
 	ch1 = rem / 1;
 
-	change = ch25 + ch10 + ch10 + ch2 + ch1;
+	change = ch25 + ch10 + ch5 + ch2 + ch1;
 
 	printf("%d\n", change);
 	return (0);
