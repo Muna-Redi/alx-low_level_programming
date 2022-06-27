@@ -13,15 +13,17 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	int i, j, k = 0;
 
+	if (s1 == NULL)
+		return (s2);
+	else if (s2 == NULL)
+		return (s1);
+	else if (s1 == NULL && s2 == NULL)
+		return('\0');
 	j = strlen(s1) + strlen(s2);
 	ptr = malloc((j + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
-	if (s1 == NULL)
-		ptr[0] = '\0';
-	else if (s2 == NULL)
-		ptr[j] = '\0';
 	while (s1[i] != '\0')
 	{
 		ptr[i] = s1[i];
