@@ -22,7 +22,9 @@ char *create_array(unsigned int size, char c)
 		i++;
 	}
 	ptr[i] = '\0';
-	if (size < 1)
+	if (size == 0)
 		return ('\0');
+	else if (ptr == NULL)
+		return (NULL);
 	return (ptr);
 }
