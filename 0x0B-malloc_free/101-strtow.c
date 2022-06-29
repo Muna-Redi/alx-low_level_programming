@@ -14,7 +14,7 @@ int count_word(char *str)
 	i = 0;
 	count = 0;
 
-	for (j = 0; str[j] != '\0'; c++)
+	for (j = 0; str[j] != '\0'; count++)
 	{
 		if (str[j] == ' ')
 			i = 0;
@@ -44,7 +44,7 @@ char **strtow(char *str)
 	if (word == 0)
 		return (NULL);
 
-	matrix = (char **) malloc(sizeof(char *) * (word + 1));
+	ptr = (char **) malloc(sizeof(char *) * (word + 1));
 	if (ptr == NULL)
 		return (NULL);
 
@@ -61,7 +61,7 @@ char **strtow(char *str)
 				while (in < out)
 					*aid++ = str[in++];
 				*aid = '\0';
-				ptr[k] = tmp - c;
+				ptr[k] = aid - c;
 				k++;
 				c = 0;
 			}
