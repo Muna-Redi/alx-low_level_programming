@@ -1,4 +1,4 @@
-#include <stdlib.h 
+#include <stdlib.h>
 
 /**
  * array_range - creates an array of integers
@@ -23,4 +23,3 @@ int *array_range(int min, int max)
 	}
 	return (aoint);
 }
-
