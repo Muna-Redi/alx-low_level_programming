@@ -2,6 +2,7 @@
 
 /** sum_them_all - this functions sums up its args
  * @n: number of args
+ * @...: unknown arguments
  * Return: returns an int
  */
 int sum_them_all(const unsigned int n, ...)
