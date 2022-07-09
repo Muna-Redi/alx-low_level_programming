@@ -47,7 +47,8 @@ void print_all(const char * const format, ...)
 		default:
 			break;
 		}
-		if (j < (i - 1))
+		if (j < (i - 1) && (pt[j] == 'c' || pt[j] == 's' ||
+				pt[j] == 'i' || pt[j] == 'f'))
 			printf(", ");
 		j++;
 	}
