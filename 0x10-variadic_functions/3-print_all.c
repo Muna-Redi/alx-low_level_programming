@@ -28,9 +28,11 @@ void print_all(const char * const format, ...)
 		case 's':
 			sent = va_arg(str, char *);
 			if (sent == NULL)
+			{
 				printf("(nil)");
-			else
-				printf("%s", sent);
+				break;
+			}
+			printf("%s", sent);
 			break;
 		case 'f':
 			rnum = va_arg(str, double);
