@@ -44,8 +44,6 @@ void print_all(const char * const format, ...)
 			let = va_arg(str, int);
 			putchar(let);
 			break;
-		default:
-			break;
 		}
 		if (j < (i - 1) && (pt[j] == 'c' || pt[j] == 's' ||
 				pt[j] == 'i' || pt[j] == 'f'))
