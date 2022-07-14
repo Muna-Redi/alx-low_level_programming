@@ -5,7 +5,7 @@
 * @h: list to be printed
 * Return: number of nodes in the list
 */
-size_t print_list(const list_t *h)
+size_t list_len(const list_t *h)
 {
 	const list_t *ph;
 	size_t n = 0;
