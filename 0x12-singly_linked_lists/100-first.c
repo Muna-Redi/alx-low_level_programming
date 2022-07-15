@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * firs - executed first before the main function
+ * first - executed first before the main function
  * Description: it prints a certain text before the main
  * function begins
  * Return: void
