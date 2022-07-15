@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
-* add_node_end - adds a node tot the begining of a list
-* @head: pointer tot the first node
+* add_node_end - adds a node to the end of a list
+* @head: pointer to the list
 * @str: string
-* Return: address of new node successfull and NULL if failed
+* Return:  of new node  and NULL if failed
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -20,23 +20,20 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(newnode);
 		return (NULL);
 	}
-	travnode = malloc(sizeof(list_t));
-	if (travnode == NULL)
-		return (NULL);
-	travnode = *head;
-	while (travnode != NULL)
+	newnode->len = strlen(pstr);
+	newnode->str = pstr;
+	if (*head == NULL)
 	{
-		if (travnode->next == NULL)
-		{
-			newnode->str = pstr;
-			newnode->len = strlen(pstr);
-			newnode->next = NULL;
-			travnode->next = newnode;
-			travnode = newnode;
-			break;
-		}
+		newnode->next = *head;
+		*head = newnode;
 	}
-	return (travnode);
+	else
+	{
+		travnode = *head;
+		while (travnode->next != NULL)
+			travnode = travnode->next;
+		travnode->next = newnode;
+	}
+	return (*head);
 	free(newnode);
-	free(travnode);
 }
