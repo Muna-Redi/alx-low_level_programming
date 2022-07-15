@@ -2,13 +2,14 @@
 
 /**
 * free_list - frees a list
-* @h: list to be freed
+* @head: list to be freed
 * Return: void
 */
 void free_list(list_t *head)
 {
 	list_t *ph;
-	while (head != NULL)
+
+	while (head->next != NULL)
 	{
 		ph = head;
 		head = head->next;
