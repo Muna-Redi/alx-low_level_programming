@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_listint - frees a list
+ * pop_listint - deletes head of a list
  * @head: begining of the list
  * Return: void
  */
