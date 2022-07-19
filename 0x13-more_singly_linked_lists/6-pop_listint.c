@@ -2,7 +2,7 @@
 
 /**
  * pop_listint - deletes head of a list
- * @head: begining of the list
+ * @head: beginning of the list
  * Return: void
  */
 int pop_listint(listint_t **head)
