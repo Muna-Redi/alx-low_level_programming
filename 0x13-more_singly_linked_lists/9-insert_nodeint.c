@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_t_index - inserts a node at aan index of list
+ * insert_nodeint_at_index - inserts a node at aan index of list
  * @head: beginning of trhe list
  * @idx: index of list
- * @int: data value
+ * @n: data value
  * Return: address of list
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
@@ -21,15 +21,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		temp = temp->next;
 		if (temp == NULL)
-		{
 			return (NULL);
-			break;
-		}
 		i++;
 	}
 	tail = temp->next;
 	newnode->next = tail;
 	temp->next = newnode;
 	return (*head);
-	free (newnode);
+	free(newnode);
 }
