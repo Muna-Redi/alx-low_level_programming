@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* set_bit - sets the bit at an index to zero
+* set_bit - sets the bit at an index to 1
 * @n: number
-* @indext: index to chnge
+* @indext: bit index to change
 */
 int set_bit(unsigned long int *n, unsigned int index)
 {
