@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* flip_bits.c - checks for number of bits flipped
+* flip_bits - checks for number of bits flipped
 * @n: number to be flopped
 * @m: prints the value of
 * Return: number of bits flipped
