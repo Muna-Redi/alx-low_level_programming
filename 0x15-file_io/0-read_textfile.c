@@ -18,29 +18,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-
 	temp = malloc(sizeof(char) * letters);
 	if (temp == NULL)
 		return (0);
-
 	ofile = open(filename, O_RDONLY);
 	if (ofile == -1)
 	{
 		free(temp);
 		return (0);
 	}
-
 	rfile = read(ofile, temp, letters);
 	if (rfile < 0)
 	{
 		free(temp);
 		return (0);
 	}
-
 	wfile = write(STDOUT_FILENO, temp, rfile);
 	free(temp);
 	close(ofile);
-
 	if (wfile < 0)
 		return (0);
 	return ((ssize_t)wfile);
