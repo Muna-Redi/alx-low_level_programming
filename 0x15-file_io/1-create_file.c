@@ -8,7 +8,7 @@
 /**
  * create_file - this creates and writes to a file
  * @filename: name of the file
- * @tex_content: content of the text file
+ * @text_content: content of the text file
  * Return: 1 success -1 if failed
  */
 int create_file(const char *filename, char *text_content)
