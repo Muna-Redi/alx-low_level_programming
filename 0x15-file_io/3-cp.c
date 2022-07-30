@@ -3,6 +3,8 @@
 /**
 * main - Entry point
 * Description: copies from one file to the other
+* @argc: number of arguments
+* @argv: list of arguments
 * Return: 0 success
 */
 int main(int argc, char *argv[])
