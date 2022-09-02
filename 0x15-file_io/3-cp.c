@@ -1,31 +1,83 @@
 #include "main.h"
 
 /**
- * main - Entry point
- * Descriprion: copies the content of one file to another
- * Return: 0 if success
- */
+* main - Entry point
+* Description: copies from one file to the other
+* @argc: number of arguments
+* @argv: list of arguments
+* Return: 0 success
+*/
 int main(int argc, char *argv[])
 {
-	int file_open file_read, file_copy;
-	char *src, *dest, *buffer;
+	char buffer[1024];
+	int bytes_read = 0, _EOF = 1, from_fd = -1, to_fd = -1, error = 0;
 
-	if (argc != 2)
+	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	src = argv[1];
-	dest = argv[2];
-	file_open = open(src, O_RDONLY);
-	if (file_read < 0)
+
+	from_fd = open(argv[1], O_RDONLY);
+	if (from_fd < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", src);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	buffer = malloc(sizeof(char) * BUFFSIZE);
-	if (buffer = NULL);
-		return(1);
-	file_read = (src, b
+
+	to_fd = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	if (to_fd < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		safe_close(from_fd);
+		exit(99);
+	}
+
+	while (_EOF)
+	{
+		_EOF = read(from_fd, buffer, 1024);
+		if (_EOF < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			safe_close(from_fd);
+			safe_close(to_fd);
+			exit(98);
+		}
+		else if (_EOF == 0)
+			break;
+		bytes_read += _EOF;
+		error = write(to_fd, buffer, _EOF);
+		if (error < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			safe_close(from_fd);
+			safe_close(to_fd);
+			exit(99);
+		}
+	}
+	error = safe_close(to_fd);
+	if (error < 0)
+	{
+		safe_close(from_fd);
+		exit(100);
+	}
+	error = safe_close(from_fd);
+	if (error < 0)
+		exit(100);
 	return (0);
+}
+
+/**
+ * safe_close - A function that closes a file and prints error when closed file
+ * @description: Description error for closed file
+ * Return: 1 on success, -1 on failure
+ */
+int safe_close(int description)
+{
+	int error;
+
+	error = close(description);
+	if (error < 0)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", description);
+	return (error);
 }
