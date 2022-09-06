@@ -24,5 +24,4 @@ char *_strncpy(char *dest, char *src, int n)
 	for (j = i; j < n; j++)
 		dest[j] = '\0';
 	return (dest);
-	_putchar('\n');
 }
