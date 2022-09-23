@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	ht_size = ht->size;
 	idx = key_index((unsigned char *)key, ht_size);
-	
+
 	new_element = malloc(sizeof(hash_node_t));
 	if (new_element == NULL)
 		return (0);
@@ -34,6 +34,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_element->next = ht->array[idx];
 		ht->array[idx] = new_element;
 	}
-	
+
 	return (1);
 }

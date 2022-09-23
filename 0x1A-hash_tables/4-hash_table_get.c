@@ -21,10 +21,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (!node_tmp)
 		return (NULL);
 
-	while(node_tmp)
+	while (node_tmp)
 	{
 		if (strcmp(key, node_tmp->key) == 0)
-			return(node_tmp->value);
+			return (node_tmp->value);
 
 		node_tmp = node_tmp->next;
 	}
