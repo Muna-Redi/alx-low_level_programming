@@ -5,7 +5,7 @@
 /**
 * main - Entry point for the Code
 *
-* Description: This code dtermines if a random
+*Description: This code determines if a random
 *number displayed, is positive or negative.
 *
 * Return: this reurns an int 0 for (success)
