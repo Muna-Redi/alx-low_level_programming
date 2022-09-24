@@ -1,48 +1,38 @@
 #include "hash_tables.h"
 
+int not_last_node(const hash_table_t *ht, hash_node_t *node);
+
 /**
-* hash_table_print - prints a hash table
-* @ht: The hash_table to be printed
-* Return: void
-*/
+ * hash_table_print - prints the contents of a hash table
+ * @ht: hash table to print
+ */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *h_node =	NULL;
-	unsigned long int i = 0, j, size, flag;
+	unsigned long int i = 0, last_pos = 0;
+	hash_node_t *node = NULL;
 
 	if (ht == NULL)
-	{
-		printf("{}");
 		return;
-	}
-
-	printf("{");
-	size = ht->size;
-	for (; i < size; i++)
+	putchar('{');
+	if (ht)
 	{
-		h_node = ht->array[i];
-		flag = 0;
-
-		while (h_node != NULL)
+		for (; i < ht->size - 1; i++)
 		{
-			printf("'%s' : '%s'", h_node->key, h_node->value);
-			if (h_node->next)
+			if (ht->array[i] != NULL)
+				last_pos = i;
+		}
+
+		for (i = 0; i <= last_pos; i++)
+		{
+			node = ht->array[i];
+			while (node)
 			{
-				h_node = h_node->next;
-				continue;
+				printf("'%s': '%s'", node->key, node->value);
+				node = node->next;
+				if (i < last_pos - 1)
+					printf(", ");
 			}
-			else
-			{
-				for (j = (i + 1); j < size; j++)
-				{
-					if ((ht->array[j] != NULL) && (flag == 0) && i < size - 1)
-					{
-						printf(",");
-						flag = 1;
-					}
-				}
-				break;
-			}
+
 		}
 	}
 	printf("}\n");
