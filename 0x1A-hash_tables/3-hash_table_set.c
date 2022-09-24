@@ -17,12 +17,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	ht_size = ht->size;
 	idx = key_index((unsigned char *)key, ht_size);
+	if (idx > ht->size)
+		return (0);
 
 	new_element = malloc(sizeof(hash_node_t));
 	if (new_element == NULL)
 		return (0);
 
-	val_copy = (char *)value;
+	val_copy = strdup(value);
 	new_element->key = (char *)key;
 	new_element->value = val_copy;
 	new_element->next = NULL;
