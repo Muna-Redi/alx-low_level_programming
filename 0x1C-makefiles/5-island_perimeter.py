@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+
 """ program to return the perimeter of an island described in a grid
-    
+
     grid is a list of list of integers:
         0 represents a water zone
         1 represents a land zone
@@ -8,8 +9,10 @@
         Grid cells are connected horizontally/vertically (not diagonally).
         Grid is rectangular, width and height don’t exceed 100
 
-    Grid is completely surrounded by water, and there is one island (or nothing).
-    The island doesn’t have “lakes” (water inside that isn’t connected to the water
+    Grid is completely surrounded by water, and there is one
+    island (or nothing)
+    The island doesn’t have “lakes” (water inside that isn’t
+    connected to the water
     around the island).
 
 """
@@ -31,6 +34,7 @@ def check_height(grid, i, j):
             break
     return height
 
+
 def check_width(grid, i, j):
     """ gets the width of the island described in the grid
         Args:
@@ -50,7 +54,7 @@ def check_width(grid, i, j):
 
     for x in range(i, len(grid)):
         y = j - 1
-        while(y > 0):
+        while (y > 0):
             if grid[x][y] == 1:
                 width += 1
                 y -= 1
@@ -58,8 +62,9 @@ def check_width(grid, i, j):
                 break
     return width + 1
 
+
 def island_perimeter(grid):
-    """ prints the perimeter of the island_in the grid 
+    """ prints the perimeter of the island_in the grid
         Args:
             grid (list of lists): describes the given island
     """
@@ -74,5 +79,4 @@ def island_perimeter(grid):
             if grid[i][j] == 1:
                 island_width = check_width(grid, i, j)
                 island_height = check_height(grid, i, j)
-                return 2 * (island_width + island_height)))
-
+                return 2 * (island_width + island_height)
