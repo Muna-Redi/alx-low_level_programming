@@ -26,7 +26,6 @@ def check_height(grid, i, j):
             j (int): grid_column index where the island begins
     """
     height = 0
-    print_grid(grid)
     for x in range(i, len(grid)):
         if grid[x][j] == 1:
             height += 1
