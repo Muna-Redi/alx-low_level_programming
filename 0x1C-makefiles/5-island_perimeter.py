@@ -47,9 +47,9 @@ def check_width(grid, i, j):
             if grid[x][y] == 1:
                 width += 1
             elif grid[x][y] == 0:
+                if width > 0:
+                    return width + 1
                 break
-    if width > 0:
-        return width + 1
 
     for x in range(i, len(grid)):
         y = j - 1
@@ -58,8 +58,9 @@ def check_width(grid, i, j):
                 width += 1
                 y -= 1
             else:
+                if width > 0:
+                    return width + 1
                 break
-    return width + 1
 
 
 def island_perimeter(grid):
